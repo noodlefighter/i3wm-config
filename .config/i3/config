@@ -182,6 +182,9 @@ bindsym $mod+Return exec $terminal
 # run launcher
 bindsym $alt+q exec ~/.config/i3/show-launcher.sh
 
+# run window switcher
+bindsym $mod+m exec ~/.config/i3/quickswitch.py --dmenu="rofi -dpi 1 -dmenu -b -i -l 20"
+
 # exit menu
 set $i3exit ~/.config/i3/i3exit
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown

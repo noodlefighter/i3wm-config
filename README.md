@@ -55,7 +55,9 @@ Tips:
 
 ## quick switch windows with `Supper+M`
 
-> TODO: 
+> quickswitch script from: https://github.com/proxypoke/quickswitch-for-i3
+
+![](preview/6.apng)
 
 
 
