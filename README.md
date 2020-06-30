@@ -11,6 +11,7 @@ Usage:
 
 ```
 $ sudo pacman -S i3-gaps i3status picom rofi xdotool wmctrl feh
+$ sudo pip install i3-py
 ```
 
 2. copy `.config ` folder to `$HOME/.config`(remember to backup)
@@ -56,6 +57,8 @@ Tips:
 ## quick switch windows with `Supper+M`
 
 > quickswitch script from: https://github.com/proxypoke/quickswitch-for-i3
+>
+> depends: python3 i3-py
 
 ![](preview/6.apng)
 
