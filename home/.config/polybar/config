@@ -61,7 +61,7 @@ font-3 = "Noto Sans Symbols2:fontformat=truetype:size=9;2"
 
 modules-left = i3
 modules-center = xwindow
-modules-right = cpu memory wlan lan pulseaudio battery date
+modules-right = cpu memory wlan lan pulseaudio backlight battery date
 
 separator = "|"
 separator-padding = 1
@@ -212,18 +212,28 @@ click-right = pavucontrol
 ; Default: 5
 interval = 5
 
+[module/backlight]
+type = internal/xbacklight
+enable-scroll = true
+format = <ramp>
+ramp-0 = 🌕
+ramp-1 = 🌔
+ramp-2 = 🌓
+ramp-3 = 🌒
+ramp-4 = 🌑
+
 [module/lan]
 type = internal/network
 interface = enp3s0
 interval = 3.0
-label-connected = "lan:%local_ip%"
+label-connected = ""
 label-disconnected =
 
 [module/wlan]
 type = internal/network
 interface = wlp2s0
 interval = 3.0
-label-connected = "wlan:%local_ip%"
+label-connected = ""
 label-disconnected =
 
 [module/fs-root]
