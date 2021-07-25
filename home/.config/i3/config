@@ -10,7 +10,9 @@ set $terminal alacritty
 # ===================
 #  Keys
 # ===================
+# Alt
 set $alt Mod1
+# Super
 set $mod Mod4
 
 
@@ -218,6 +220,8 @@ bindsym $mod+x mode "$mode_system"
 # Lock
 bindsym $mod+o exec $i3exit lock
 
+# i3-instant-layout (need install from pip)
+bindsym $mod+m exec "i3-instant-layout --list | rofi -dmenu -i | i3-instant-layout -"
 
 # ===================
 #  Personal Setting

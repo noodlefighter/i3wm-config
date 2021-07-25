@@ -11,7 +11,7 @@ Usage:
 
 ```
 $ sudo pacman -S i3-gaps i3status picom rofi xdotool wmctrl feh
-$ sudo pip install i3-py
+$ sudo pip install i3-py i3-instant-layout
 ```
 
 2. copy `.config ` folder to `$HOME/.config`(remember to backup)
