@@ -4,7 +4,7 @@
 # ===================
 #  Golbal
 # ===================
-set $terminal alacritty
+set $terminal "WAYLAND_DISPLAY= alacritty"
 
 
 # ===================
@@ -90,9 +90,6 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
-# rename a windows and show titlebar, input nothing for hide titlebar
-bindsym $mod+t exec ~/.config/i3/set_focus_wm_title.sh
-
 # ===================
 #  Workspace Manage
 # ===================
@@ -135,9 +132,9 @@ bindsym $alt+Shift+9 move container to workspace number $ws9
 bindsym $alt+Shift+0 move container to workspace number $ws10
 
 # ===================
-#  polybar
+#  waybar
 # ===================
-exec --no-startup-id $HOME/.config/polybar/launch.sh
+exec --no-startup-id waybar
 
 # ===================
 #  Looks
@@ -220,15 +217,14 @@ bindsym $mod+x mode "$mode_system"
 # Lock
 bindsym $mod+o exec $i3exit lock
 
-# i3-instant-layout (need install from pip)
-bindsym $mod+m exec "i3-instant-layout --list | rofi -dmenu -i | i3-instant-layout -"
-
 # ===================
 #  Personal Setting
 # ===================
 
 # shortcuts bindings
-bindsym $mod+p exec "flameshot gui"
+#bindsym $mod+p exec "flameshot gui"
+bindsym Print exec grim ~/Pictures/screen-"$(date +%s)".png
+bindsym $mod+p exec grim -g "$(slurp)" ~/Pictures/screen-"$(date +%s)".png
 
 # windows auto float
 for_window [class="netease-cloud-music"]   floating enable
@@ -236,13 +232,14 @@ for_window [class="Galculator"]   floating enable
 for_window [class="Dukto"]   floating enable
 for_window [class="flameshot"]   floating enable
 for_window [class="pavucontrol"]   floating enable
+for_window [class="nm-tray"]   floating enable
 
 # random background
 exec --no-startup-id ~/.config/i3/random-bg-picture.sh
 
 # startup applications
 exec --no-startup-id fcitx5 -d --keep --replace
-exec --no-startup-id nm-applet
+exec --no-startup-id nm-applet  --indicator
 exec --no-startup-id /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id goldendict
