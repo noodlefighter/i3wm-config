@@ -105,7 +105,7 @@ set $ws9 "9 note"
 set $ws10 "10 web"
 
 # rename workspace
-bindsym $mod+n exec ~/.config/i3/my-i3-input.py -F 'rename workspace to "%s"' -P "New Workspace Name"
+bindsym $mod+n exec ~/.config/i3/my-i3-input.py -F 'rename workspace to "%s"' -P "New Workspace Name" -I swaymsg
 
 # switch to workspace
 bindsym $alt+1 workspace number $ws1
