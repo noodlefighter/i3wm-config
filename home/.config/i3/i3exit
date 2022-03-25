@@ -3,8 +3,7 @@
 cd "$(dirname "$0")"
 
 lock() {
-  grim -t jpeg - | convert -  -blue-shift 0.5 -scale 20% -blur 0x2.5 -resize 500% /tmp/mylock.jpeg
-  swaylock -i /tmp/mylock.jpeg &
+  ./blurlock
 }
 
 case "$1" in

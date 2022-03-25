@@ -1,10 +1,7 @@
 #!/bin/bash
 
-cd ~/nutstore/BG
-
 while :
 do
-  killall swaybg
-  swaybg -i $(ls |sort -R |tail -1) --mode fill &
+	feh --randomize --bg-fill ~/nutstore/BG
 	sleep 600
 done

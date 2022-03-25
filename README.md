@@ -10,8 +10,8 @@ Usage:
 1. install requirements programs
 
 ```
-$ sudo pacman -S sway waybar grim slurp picom rofi wmctrl feh
-$ sudo pip install i3-py
+$ sudo pacman -S i3-gaps i3status picom rofi xdotool wmctrl feh
+$ sudo pip install i3-py i3-instant-layout
 ```
 
 2. copy `.config ` folder to `$HOME/.config`(remember to backup)
@@ -25,7 +25,7 @@ Tips:
 
 
 
-## launcher: replace "dmenu" to "rofi" with `Alt+Q`
+## launcher: replace "dmenu" to "rofi" with `Alt+Q` 
 
 > depends: rofi
 
@@ -64,7 +64,7 @@ Tips:
 
 
 
-## rename a windows and show titlebar `Supper+T`
+## rename a windows and show titlebar `Supper+T` 
 
 > depends: rofi,xdotool,wmctrl
 
