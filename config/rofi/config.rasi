@@ -61,7 +61,7 @@ configuration {
 	color-active: "#1E272B, #EAD49B, #1E272B, #1E272B, #78824B";
 	color-window: "#1E272B, #9D6A47, #9D6A47";
 /*	max-history-size: 25;*/
-/*	combi-hide-mode-prefix: false;*/
+	combi-hide-mode-prefix: true;
 /*	matching-negate-char: '-' /* unsupported */;*/
 /*	cache-dir: ;*/
 /*	window-thumbnail: false;*/
