@@ -10,7 +10,7 @@ URxvt.internalBorder: 6
 
 *foreground: #EAD49B
 *background: #1E272B
-*cursor: #EAD49B
+! *cursor: #EAD49B
 *color0: #1E272B
 *color1: #685742
 *color2: #9D6A47
