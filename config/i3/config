@@ -92,8 +92,11 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
+# show/hide titlebar
+bindsym $mod+t exec i3-msg border toggle
+
 # rename a windows and show titlebar, input nothing for hide titlebar
-bindsym $mod+t exec ~/.config/i3/set_focus_wm_title.sh
+bindsym $mod+shift+t exec ~/.config/i3/set_focus_wm_title.sh
 
 # ===================
 #  Workspace Manage
