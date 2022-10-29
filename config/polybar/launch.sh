@@ -4,7 +4,7 @@
 killall -q polybar
 
 # Wait until the processes have been shut down
-sleep 1
+sleep 2
 
 # Launch the example bar
 polybar main_bar
