@@ -5,6 +5,7 @@
 #  Golbal
 # ===================
 set $terminal alacritty
+set $mouse-jump exec ~/.config/i3/mouse-jump-to-focus-window.sh
 
 
 # ===================
@@ -28,6 +29,7 @@ set $mod Mod4
 # exit i3 (logs you out of your X session)
 #bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
+mouse_warping none
 
 # ===================
 #  Window Manage
@@ -39,10 +41,10 @@ floating_modifier $alt
 bindsym $mod+q kill
 
 # change focus
-bindsym $mod+h focus left
-bindsym $mod+j focus down
-bindsym $mod+k focus up
-bindsym $mod+l focus right
+bindsym $mod+h focus left $mouse-jump
+bindsym $mod+j focus down $mouse-jump
+bindsym $mod+k focus up $mouse-jump
+bindsym $mod+l focus right $mouse-jump
 
 # move focused window
 bindsym $mod+Shift+h move left
@@ -111,16 +113,16 @@ set $ws10 "10 web"
 bindsym $mod+n exec ~/.config/i3/my-i3-input.py -F 'rename workspace to "%s"' -P "New Workspace Name"
 
 # switch to workspace
-bindsym $alt+1 workspace number $ws1
-bindsym $alt+2 workspace number $ws2
-bindsym $alt+3 workspace number $ws3
-bindsym $alt+4 workspace number $ws4
-bindsym $alt+5 workspace number $ws5
-bindsym $alt+6 workspace number $ws6
-bindsym $alt+7 workspace number $ws7
-bindsym $alt+8 workspace number $ws8
-bindsym $alt+9 workspace number $ws9
-bindsym $alt+0 workspace number $ws10
+bindsym $alt+1 workspace number $ws1 $mouse-jump
+bindsym $alt+2 workspace number $ws2 $mouse-jump
+bindsym $alt+3 workspace number $ws3 $mouse-jump
+bindsym $alt+4 workspace number $ws4 $mouse-jump
+bindsym $alt+5 workspace number $ws5 $mouse-jump
+bindsym $alt+6 workspace number $ws6 $mouse-jump
+bindsym $alt+7 workspace number $ws7 $mouse-jump
+bindsym $alt+8 workspace number $ws8 $mouse-jump
+bindsym $alt+9 workspace number $ws9 $mouse-jump
+bindsym $alt+0 workspace number $ws10 $mouse-jump
 
 # move focused container to workspace
 bindsym $alt+Shift+1 move container to workspace number $ws1
