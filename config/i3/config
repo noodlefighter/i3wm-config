@@ -35,7 +35,7 @@ mouse_warping none
 #  Window Manage
 # ===================
 # Use Mouse+$mod to drag floating windows to their wanted position
-floating_modifier $alt
+floating_modifier $mod
 
 # kill focused window, alt+F4
 bindsym $mod+q kill
