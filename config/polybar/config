@@ -104,14 +104,14 @@ label-mode-padding = 0
 ;label-focused = %index%
 label-focused-foreground = ${colors.my_foreground}
 ;label-focused-background = ${colors.my_background}
-label-focused-underline = ${colors.my_color4}
+label-focused-underline = ${colors.my_foreground}
 label-focused-padding = 0
 
 ;label-unfocused = %index%
 label-unfocused-padding = 0
 
 ;label-visible = %index%
-label-visible-underline = ${colors.my_foreground}
+label-visible-underline = ${colors.my_color4}
 label-visible-padding = 0
 
 ;label-urgent = %index%
