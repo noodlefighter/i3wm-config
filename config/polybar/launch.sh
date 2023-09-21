@@ -6,6 +6,10 @@ killall -q polybar
 # Wait until the processes have been shut down
 sleep 2
 
-# Launch the example bar
-polybar main_bar
-
+if type "xrandr"; then
+  for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
+    MONITOR=$m polybar --reload main_bar &
+  done
+else
+  polybar --reload main_bar &
+fi

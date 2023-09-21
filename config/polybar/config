@@ -37,8 +37,7 @@ height = 20
 ;dpi-y=192
 ;height=35
 
-;monitor = ${env:MONITOR:HDMI-1}
-;monitor = ${env:MONITOR:eDP1}
+monitor = ${env:MONITOR:}
 bottom = false
 width = 100%
 offset-x = 0
