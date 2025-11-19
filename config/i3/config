@@ -98,6 +98,9 @@ bindsym $mod+t exec i3-msg border toggle
 # rename a windows and show titlebar, input nothing for hide titlebar
 bindsym $mod+shift+t exec ~/.config/i3/set_focus_wm_title.sh
 
+# monitor changed
+exec --no-startup-id "~/.config/i3/monitor_watcher.sh"
+
 # ===================
 #  Workspace Manage
 # ===================
@@ -111,6 +114,17 @@ set $ws7 "7"
 set $ws8 "8 toy"
 set $ws9 "9 note"
 set $ws10 "10 web"
+
+exec --no-startup-id i3-msg '$ws1'
+exec --no-startup-id i3-msg '$ws2'
+exec --no-startup-id i3-msg '$ws3'
+exec --no-startup-id i3-msg '$ws4'
+exec --no-startup-id i3-msg '$ws5'
+exec --no-startup-id i3-msg '$ws6'
+exec --no-startup-id i3-msg '$ws7'
+exec --no-startup-id i3-msg '$ws8'
+exec --no-startup-id i3-msg '$ws9'
+exec --no-startup-id i3-msg '$ws10'
 
 # rename workspace
 bindsym $mod+n exec ~/.config/i3/my-i3-input.py -F 'rename workspace to "%s"' -P "New Workspace Name"
@@ -169,7 +183,7 @@ client.focused_inactive $inactive-bg-color $inactive-bg-color $inactive-text-col
 client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          #424242
 
 # compton for opacity etc.
-exec compton
+exec compton --config ~/.config/compton.conf
 
 # ===================
 #  Extra Key Binding
@@ -226,7 +240,7 @@ bindsym $mod+x mode "$mode_system"
 bindsym $mod+o exec $i3exit lock
 
 # i3-instant-layout (need install from pip)
-bindsym $mod+m exec "i3-instant-layout --list | rofi -dmenu -i | i3-instant-layout -"
+bindsym $mod+m exec ~/.config/i3/show-layout-selector.sh
 
 # ===================
 #  Personal Setting
