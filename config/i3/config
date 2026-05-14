@@ -99,7 +99,7 @@ bindsym $mod+t exec i3-msg border toggle
 bindsym $mod+shift+t exec ~/.config/i3/set_focus_wm_title.sh
 
 # monitor changed
-exec --no-startup-id "~/.config/i3/monitor_watcher.sh"
+exec --no-startup-id "~/.config/i3/run_workspace_monitor.sh"
 
 # ===================
 #  Workspace Manage
@@ -111,9 +111,9 @@ set $ws4 "4"
 set $ws5 "5"
 set $ws6 "6"
 set $ws7 "7"
-set $ws8 "8 toy"
-set $ws9 "9 note"
-set $ws10 "10 web"
+set $ws8 "8"
+set $ws9 "9"
+set $ws10 "10"
 
 exec --no-startup-id i3-msg '$ws1'
 exec --no-startup-id i3-msg '$ws2'
@@ -222,7 +222,7 @@ bindsym $alt+q exec ~/.config/i3/show-launcher.sh
 
 # exit menu
 set $i3exit ~/.config/i3/i3exit
-set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
+set $mode_system System (l) 锁定 , (e) 登出, (s) 挂起 (h) 休眠, (r) 重启, (Shift+s) 关机
 mode "$mode_system" {
     bindsym l exec --no-startup-id $i3exit lock, mode "default"
     bindsym e exec --no-startup-id $i3exit logout, mode "default"
@@ -255,6 +255,9 @@ for_window [class="Galculator"]   floating enable
 for_window [class="Dukto"]   floating enable
 for_window [class="flameshot"]   floating enable
 for_window [class="pavucontrol"]   floating enable
+for_window [title="AI Toolbox"]   floating enable
+for_window [class="Clipshare"]   floating enable
+for_window [class="Vocotype Flutter"]   floating enable
 
 # random background
 exec --no-startup-id ~/.config/i3/random-bg-picture.sh
