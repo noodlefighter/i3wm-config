@@ -44,7 +44,7 @@ class WorkspaceMonitor:
         self.right_output = right_output
         
         if left_workspaces is None:
-            self.left_workspaces = [0, 6, 7, 8, 9]
+            self.left_workspaces = [0, 6, 7, 8, 9, 10]
         else:
             self.left_workspaces = left_workspaces
             
@@ -193,8 +193,8 @@ class WorkspaceMonitor:
         elif workspace_num in self.right_workspaces:
             return self.right_output
         else:
-            # 未知工作区，默认放在右屏幕
-            return self.right_output
+            # 未知工作区，不移动
+            return None
     
     def _move_workspace(self, workspace_num: int, target_output: str, debug: bool = False) -> bool:
         """
@@ -271,8 +271,13 @@ class WorkspaceMonitor:
             
             expected_output = self._get_expected_output(ws_num)
             
+            # 跳过未知工作区（不在配置中的工作区）
+            if expected_output is None:
+                continue
+            
             if current_output != expected_output:
-                print(f"工作区 {ws_num} 当前在 {current_output}，应该在 {expected_output}")
+                if debug:
+                    print(f"工作区 {ws_num} 当前在 {current_output}，应该在 {expected_output}")
                 if self._move_workspace(ws_num, expected_output, debug=debug):
                     fixed_count += 1
         
